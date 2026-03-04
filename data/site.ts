@@ -4,7 +4,7 @@ export const siteConfig = {
   url: 'https://invisaligndentists.uk',
   phone: '020 1234 5678',
   phoneHref: 'tel:+442012345678',
-  email: 'hello@invisaligndentists.com',
+  email: 'hello@invisaligndentists.uk',
   description: 'Connecting discerning patients with the top 1% of Platinum Invisalign providers for verified orthodontic results across the UK.',
   tagline: 'Only the Top 5% of Invisalign Providers',
 };
