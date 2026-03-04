@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Invisalign Dentists',
-  domain: 'invisaligndentists.com',
-  url: 'https://www.invisaligndentists.com',
+  domain: 'invisaligndentists.uk',
+  url: 'https://invisaligndentists.uk',
   phone: '020 1234 5678',
   phoneHref: 'tel:+442012345678',
   email: 'hello@invisaligndentists.com',
