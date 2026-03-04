@@ -332,7 +332,7 @@ export default function ArticlePage() {
       <div className="min-h-screen bg-white text-gray-900">
         <Header onOpenModal={() => setIsModalOpen(true)} />
         <div className="pt-32 px-6 max-w-5xl mx-auto">
-          <h1 className="text-3xl font-bold text-white">Article not found</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Article not found</h1>
           <Link href="/blog" className="text-brand-600 underline mt-6 inline-block">
             Back to blog
           </Link>
@@ -389,10 +389,10 @@ export default function ArticlePage() {
           {(() => {
             const articleClasses = [
               'p-10 max-w-none',
-              '[&_h1]:text-4xl [&_h1]:md:text-5xl [&_h1]:font-bold [&_h1]:tracking-tight [&_h1]:text-white [&_h1]:mt-10 [&_h1]:mb-5',
-              '[&_h2]:text-3xl [&_h2]:md:text-4xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:text-white [&_h2]:mt-10 [&_h2]:mb-4',
-              '[&_h3]:text-2xl [&_h3]:md:text-3xl [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:text-white [&_h3]:mt-8 [&_h3]:mb-3',
-              '[&_h4]:text-xl [&_h4]:font-bold [&_h4]:text-white [&_h4]:mt-7 [&_h4]:mb-3',
+              '[&_h1]:text-4xl [&_h1]:md:text-5xl [&_h1]:font-bold [&_h1]:tracking-tight [&_h1]:text-gray-900 [&_h1]:mt-10 [&_h1]:mb-5',
+              '[&_h2]:text-3xl [&_h2]:md:text-4xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:text-gray-900 [&_h2]:mt-10 [&_h2]:mb-4',
+              '[&_h3]:text-2xl [&_h3]:md:text-3xl [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:text-gray-900 [&_h3]:mt-8 [&_h3]:mb-3',
+              '[&_h4]:text-xl [&_h4]:font-bold [&_h4]:text-gray-900 [&_h4]:mt-7 [&_h4]:mb-3',
               '[&_p]:text-gray-600 [&_p]:font-medium [&_p]:leading-relaxed [&_p]:mb-5',
               '[&_a]:text-brand-600 [&_a]:font-bold [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-brand-400',
               '[&_ul]:my-6 [&_ul]:pl-7 [&_ul]:list-disc [&_ul]:list-outside [&_ul]:space-y-3 [&_ul]:text-gray-600 [&_ul]:font-medium',
@@ -404,7 +404,7 @@ export default function ArticlePage() {
               '[&_img]:w-full [&_img]:h-auto [&_img]:rounded-3xl [&_img]:border [&_img]:border-gray-200 [&_img]:shadow-2xl [&_img]:my-8',
               '[&_table]:w-full [&_table]:my-10 [&_table]:overflow-hidden [&_table]:rounded-3xl [&_table]:border [&_table]:border-gray-200 [&_table]:bg-white/5 [&_table]:shadow-2xl',
               '[&_thead]:bg-gray-100',
-              '[&_th]:text-left [&_th]:px-5 [&_th]:py-4 [&_th]:text-white [&_th]:text-sm [&_th]:font-bold [&_th]:tracking-wide',
+              '[&_th]:text-left [&_th]:px-5 [&_th]:py-4 [&_th]:text-gray-900 [&_th]:text-sm [&_th]:font-bold [&_th]:tracking-wide',
               '[&_td]:px-5 [&_td]:py-4 [&_td]:text-gray-900 [&_td]:text-sm [&_td]:font-medium [&_td]:border-t [&_td]:border-gray-200',
               'hover:[&_tbody_tr]:bg-white/5',
               '[&_code]:px-2 [&_code]:py-1 [&_code]:rounded-lg [&_code]:bg-gray-100 [&_code]:text-gray-700 [&_code]:text-[0.95em]',
@@ -429,7 +429,7 @@ export default function ArticlePage() {
 
         {relatedArticles.length > 0 && (
           <div className="mt-16">
-            <h2 className="text-2xl font-bold text-white">Related articles</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Related articles</h2>
 
             <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               {relatedArticles.map((a) => (
@@ -459,7 +459,7 @@ export default function ArticlePage() {
                   </div>
 
                   <div className="p-8 flex-1 flex flex-col">
-                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-brand-600 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-brand-600 transition-colors">
                       {a['Article Title']}
                     </h3>
                     <div className="flex items-center gap-2 text-brand-600 font-bold uppercase tracking-widest text-[10px] mt-auto">
@@ -474,7 +474,7 @@ export default function ArticlePage() {
 
         {furtherReading.length > 0 && (
           <div className="mt-16">
-            <h2 className="text-2xl font-bold text-white">Further Reading</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Further Reading</h2>
             <ul className="mt-6 space-y-3">
               {furtherReading.map((l) => (
                 <li key={l.url}>
