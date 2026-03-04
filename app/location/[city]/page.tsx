@@ -120,8 +120,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
               <NearbyAreasGrid cityName={cityName} />
 
               {/* FAQs */}
-              <div className="mb-12"><FAQ faqs={FAQS_LOCATION} title={`Invisalign in ${cityName} — FAQs`} /></div>
-              <div className="mb-12"><FAQ faqs={FAQS_SERVICES} title="General Invisalign FAQs" /></div>
+              <div className="mb-12"><FAQ faqs={[...FAQS_LOCATION, ...FAQS_SERVICES]} title={`Invisalign in ${cityName} — FAQs`} /></div>
 
               {/* Reviews */}
               <section className="mb-16">
