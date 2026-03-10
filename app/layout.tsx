@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   alternates: { canonical: siteConfig.url },
   robots: { index: true, follow: true },
+  verification: { google: 's-2zvSqgH_L7grV9ZYO6E3Wb8Kzy5cyWLcXEKnRtWzk' },
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
