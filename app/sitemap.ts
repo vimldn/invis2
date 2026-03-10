@@ -3,27 +3,29 @@ import { services } from '@/data/services';
 import { LOCATIONS, toSlug } from '@/data/locations';
 import { siteConfig } from '@/data/site';
 
+const LAST_MODIFIED = '2025-03-10';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   const allCities = Object.values(LOCATIONS).flat();
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${base}/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${base}/services/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${base}/location/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${base}/blog/`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
+    { url: `${base}/`,          lastModified: LAST_MODIFIED, changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${base}/services/`, lastModified: LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/location/`, lastModified: LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/blog/`,     lastModified: LAST_MODIFIED, changeFrequency: 'daily',  priority: 0.8 },
   ];
 
   const servicePages: MetadataRoute.Sitemap = services.map(s => ({
     url: `${base}/services/${s.slug}/`,
-    lastModified: new Date(),
+    lastModified: LAST_MODIFIED,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }));
 
   const locationPages: MetadataRoute.Sitemap = allCities.map(city => ({
     url: `${base}/location/${toSlug(city)}/`,
-    lastModified: new Date(),
+    lastModified: LAST_MODIFIED,
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }));
@@ -33,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const city of allCities) {
       serviceLocationPages.push({
         url: `${base}/services/${service.slug}/${toSlug(city)}/`,
-        lastModified: new Date(),
+        lastModified: LAST_MODIFIED,
         changeFrequency: 'weekly' as const,
         priority: 0.9,
       });
